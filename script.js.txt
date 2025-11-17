@@ -1,0 +1,13 @@
+function addPost() {
+  const input = document.getElementById('post-input');
+  const postsDiv = document.getElementById('posts');
+
+  if(input.value.trim() === "") return;
+
+  const post = document.createElement('div');
+  post.className = "post";
+  post.textContent = input.value;
+
+  postsDiv.prepend(post); // لإظهار الجديد فوق
+  input.value = "";
+}
